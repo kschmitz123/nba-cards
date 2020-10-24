@@ -1,0 +1,16 @@
+.header {
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secondary);
+}
+
+.header > img {
+  height: 150px;
+}
+
+h1 {
+  color: white;
+  font-size: 4rem;
+  margin: 0;
+}
