@@ -14,3 +14,6 @@ export function styled(component, className) {
     return element;
   };
 }
+
+export const Component = (tagName, props) => (elementProps) =>
+  createElement(tagName, { ...props, ...elementProps });

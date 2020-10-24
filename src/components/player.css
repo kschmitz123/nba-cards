@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid black;
+  margin: 10px 20px;
+  box-shadow: -5px -2px 143px -13px rgba(133, 133, 133, 0.82);
+}
+.player__name {
+  font-size: 2rem;
+  text-align: center;
+}
+.player__infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player__team {
+  text-transform: uppercase;
+}
