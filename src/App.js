@@ -1,16 +1,14 @@
 import "./app.css";
-import Button from "./components/Button";
 import AppBar from "./components/AppBar";
+import Player from "./components/Player";
 import { Component } from "./utils/elements";
 
-const Main = Component("main", {
-  innerText: "👋",
-});
+const Main = Component("main");
 const Container = Component("div");
 
 const App = () =>
   Container({
-    children: [AppBar(), Main(), Button({ innerText: "Hello" })],
+    children: [AppBar(), Main(), Player()],
   });
 
 export default App;
