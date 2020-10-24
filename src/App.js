@@ -14,7 +14,7 @@ function App() {
     console.log(players);
     const playerElements = players.map((player) =>
       createPlayer({
-        name: player.first_name,
+        name: `${player.first_name} ${player.last_name}`,
         position: player.position,
         team: player.team,
         city: player.team,
