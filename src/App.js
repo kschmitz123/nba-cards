@@ -31,7 +31,7 @@ function App() {
       })
     );
     main.append(...playerElements);
-    nextPage = players.meta.next_page?.match(/\d+/)[0];
+    nextPage = players.meta.next_page;
     loadMoreBtn.disabled = !players.meta.next_page;
     lastName = name;
   }
