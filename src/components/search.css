@@ -1,0 +1,13 @@
+.searchbar {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  height: 2rem;
+}
+.searchbar > button {
+  background-color: var(--bg-button);
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
