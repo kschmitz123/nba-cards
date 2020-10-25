@@ -19,3 +19,9 @@ body {
   margin: 0;
   background: var(--bg-primary);
 }
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

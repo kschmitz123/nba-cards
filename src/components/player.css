@@ -1,4 +1,5 @@
 .container {
+  width: 300px;
   border: 1px solid black;
   margin: 10px 20px;
   box-shadow: -5px -2px 143px -13px rgba(133, 133, 133, 0.82);
@@ -14,4 +15,8 @@
 }
 .player__team {
   text-transform: uppercase;
+  font-weight: bold;
+}
+.player__infos > p {
+  margin: 2px;
 }
