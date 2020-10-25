@@ -23,11 +23,16 @@ function App() {
     );
     main.append(...playerElements);
   }
-
+  const searchBar = Search({
+    onchange: (value) => {
+      main.innerHTML = "";
+      loadPlayers(value);
+    },
+  });
   loadPlayers();
 
   const container = createElement("div", {
-    children: [AppBar(), Search(), main],
+    children: [AppBar(), searchBar, main],
   });
   return container;
   //   const App = () =>

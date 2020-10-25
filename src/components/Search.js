@@ -1,14 +1,21 @@
 import "./search.css";
-import { Component } from "../utils/elements";
-import Button from "./Button";
+import { Component, createElement } from "../utils/elements";
 
-const Input = Component("input");
-const SearchBtn = Button({ className: "search__btn", innerText: "🔍🏀" });
-const Search = Component("form", {
-  children: [
-    Input({ placeholder: "Search for player", className: "search__input" }),
-    SearchBtn,
-  ],
-});
-
+function Search({ onchange }) {
+  const input = createElement("input", {
+    placeholder: "Search for player",
+  });
+  const Button = Component("button", {
+    innerText: "🔍🏀",
+  });
+  const container = createElement("form", {
+    className: "searchbar",
+    children: [input, Button()],
+    onsubmit: (event) => {
+      event.preventDefault();
+      onchange(input.value);
+    },
+  });
+  return container;
+}
 export default Search;
