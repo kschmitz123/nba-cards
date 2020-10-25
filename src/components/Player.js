@@ -1,22 +1,28 @@
 import "./player.css";
-import { Component } from "../utils/elements";
+import { createElement } from "../utils/elements";
 
-const Name = Component("h3", {
-  innerText: "Al Horford",
-  className: "player__name",
-});
-const Infos = Component("p");
-const InfoContainer = Component("div", {
-  className: "player__infos",
-  children: [
-    Infos({ innerText: "Position: ", className: "player__position" }),
-    Infos({ innerText: " Team", className: "player__team" }),
-    Infos({ innerText: "city", className: "player__city" }),
-  ],
-});
-const Player = Component("article", {
-  className: "container",
-  children: [Name(), InfoContainer()],
-});
+function createPlayer({ ...props }) {
+  const Name = createElement("h3", {
+    innerText: props.name,
+    className: "player__name",
+  });
+  const Position = createElement("p", {
+    innerText: "Position: " + props.position,
+  });
+  const Team = createElement("p", {
+    innerText: props.team.full_name,
+    className: "player__team",
+  });
+  const City = createElement("p", { innerText: props.team.city });
+  const InfoContainer = createElement("div", {
+    className: "player__infos",
+    children: [Position, Team, City],
+  });
+  const container = createElement("article", {
+    className: "container",
+    children: [Name, InfoContainer],
+  });
 
-export default Player;
+  return container;
+}
+export default createPlayer;
