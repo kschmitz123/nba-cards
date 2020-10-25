@@ -1,9 +1,12 @@
 .button {
-  border-radius: 10px;
-  padding: 0.2em 0.5em;
-  border: 1px solid #333;
+  background-color: var(--bg-button);
+  border: none;
+  height: 2rem;
+  border-radius: 5px;
+  color: var(--secondary-font);
+  cursor: pointer;
 }
 
 .button:active {
-  background: grey;
+  background: #1368c4;
 }
