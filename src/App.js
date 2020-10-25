@@ -1,5 +1,6 @@
 import "./app.css";
 import AppBar from "./components/AppBar";
+import Search from "./components/Search";
 import createPlayer from "./components/Player";
 import { createElement } from "./utils/elements";
 import { getAllPlayers } from "./utils/api";
@@ -26,7 +27,7 @@ function App() {
   loadPlayers();
 
   const container = createElement("div", {
-    children: [AppBar(), main],
+    children: [AppBar(), Search(), main],
   });
   return container;
   //   const App = () =>
